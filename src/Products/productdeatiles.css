@@ -1,0 +1,9 @@
+
+@media (max-width:800px){
+    .product-img{
+        height: 350px;
+    }
+    .product-deatiles{
+        margin-top: 40px;
+    }
+}

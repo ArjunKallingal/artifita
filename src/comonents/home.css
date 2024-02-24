@@ -1,0 +1,15 @@
+.category{
+    background-color: rgb(255, 196, 0);
+    border-radius: 15px;
+    padding: 15px;
+    width: 180px;
+    margin-left: 10px;
+    color: aliceblue;
+    cursor: pointer;
+    border: none;
+}
+.home-add{
+    display: flex;
+    justify-content: end;
+    padding: 50px;
+}
