@@ -11,21 +11,22 @@ import { Edit } from './comonents/Edit';
 import Cart from './comonents/Cart';
 
 function App() {
+  const userData = localStorage.getItem('userData')
   return (
     <div className="App">
-        <Router>
-          <Routes>
-            <Route path='/' element={<Login />} />
-            <Route path='/singup' element={<Singup />} />
-            <Route path='/home' element={<Home />} />
-            <Route path='/product-deatiles' element={<Productdeatiles />} />
-            <Route path='/add-products' element={<AddItems />} />
-            <Route path='/add-category' element={<Addcategory />} />
-            <Route path='/buy-now' element={<Buynow />} />
-            <Route path='/Edit' element={<Edit />} />
-            <Route path='/cart' element={<Cart />} />
-          </Routes>
-        </Router>
+      <Router>
+        <Routes>
+          <Route path="/" element={userData ? <Home /> : <Login />} />
+          <Route path="/singup" element={userData ? <Home /> : <Singup />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/product-details/:id" element={<Productdeatiles />} />
+          <Route path="/add-products" element={<AddItems />} />
+          <Route path="/add-category" element={<Addcategory />} />
+          <Route path="/buy-now" element={<Buynow />} />
+          <Route path="/Edit/:id" element={<Edit />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

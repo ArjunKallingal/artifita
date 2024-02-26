@@ -39,9 +39,9 @@ const AddItems = () => {
       const res = await addProduct({
         name: pname,
         price: price,
-        ram: imgUrl,
-        des: ram,
-        imgUrl: dec,
+        ram: ram,
+        des: dec,
+        imgUrl: imgUrl,
       });
       if (res.status) navigate("/home");
       else alert(res.message);

@@ -23,8 +23,10 @@ const Login = () => {
       setError(obj);
     } else {
       const res = await userLogin(uname, password);
-      if (res.status) navigate("/home");
-      else alert(res.message);
+      if (res.status) {
+        localStorage.setItem("userData", res.data._id);
+        navigate("/home");
+      } else alert(res.message);
     }
   };
 
